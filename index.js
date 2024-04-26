@@ -1,12 +1,12 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 console.log("\n\twelcome to cli-number-guessing-game\n");
-const randomNumber = Math.floor(Math.random() * 8 + 1);
+const randomNumber = Math.floor(Math.random() * 6 + 1);
 const answer = await inquirer.prompt([
     {
         name: "UserGuessedNumber",
         type: "number",
-        message: "Enter your guess number(Number Limit from 1 to 8):",
+        message: "Enter your guess number(Number Limit from 1 to 6):",
     },
 ]);
 if (answer.UserGuessedNumber === randomNumber) {
